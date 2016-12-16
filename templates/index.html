@@ -2,11 +2,11 @@
 <html>
 <head>
     <title>School Donations Dashboard</title>
-    <link rel="stylesheet" href="./static/lib/css//bootstrap.min.css">
-    <link rel="stylesheet" href="./static/lib/css/keen-dashboards.css">
-    <link rel="stylesheet" href="./static/lib/css/dc.css">
-    <link rel="stylesheet" href="./static/css/custom.css">
-     <link rel="stylesheet" href="./static/lib/css/introjs.css"/>
+    <link rel="stylesheet" href="{{ url_for ('static',filename='lib/css//bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for ('static',filename='lib/css/keen-dashboards.css') }}">
+    <link rel="stylesheet" href="{{ url_for ('static',filename='lib/css/dc.css') }}">
+    <link rel="stylesheet" href="{{ url_for ('static',filename='css/custom.css') }}">
+    <link rel="stylesheet" href="{{ url_for ('static',filename='lib/css/introjs.css') }}">
 </head>
 <body class="application">
 
@@ -21,7 +21,7 @@
     </div>
 </div>
 
-<div  id="outer" class="container-fluid">
+<div id="outer" class="container-fluid">
 
     <div class="row">
 
@@ -31,7 +31,7 @@
                 <!-- Time Chart -->
                 <div class="col-sm-12">
                     <div class="chart-wrapper" data-step=" 1 " data-intro=" The description that you want"
-                         style="font-weight: normal" data-position="right" >
+                         style="font-weight: normal" data-position="right">
                         <div class="chart-title">
                             Number of Donations
                         </div>
@@ -45,7 +45,7 @@
                 <!-- Resources -->
                 <div class="col-sm-6">
                     <div class="chart-wrapper" data-step=" 2 " data-intro=" The description that you want"
-                         style="font-weight: normal" data-position="right" >
+                         style="font-weight: normal" data-position="right">
                         <div class="chart-title">
                             Resources Type
                         </div>
@@ -59,8 +59,8 @@
 
                 <!-- funding Pie -->
                 <div class="col-sm-6">
-                    <div class="chart-wrapper"data-step=" 3 " data-intro=" The description that you want"
-                         style="font-weight: normal" data-position="right" >
+                    <div class="chart-wrapper" data-step=" 3 " data-intro=" The description that you want"
+                         style="font-weight: normal" data-position="right">
                         <div class="chart-title">
                             Funding Status
                         </div>
@@ -76,8 +76,8 @@
 
         <!-- Poverty -->
         <div class="col-sm-3">
-            <div class="chart-wrapper"data-step=" 4 " data-intro=" The description that you want"
-                         style="font-weight: normal" data-position="right" >
+            <div class="chart-wrapper" data-step=" 4 " data-intro=" The description that you want"
+                 style="font-weight: normal" data-position="right">
                 <div class="chart-title">
                     Poverty Level
                 </div>
@@ -91,7 +91,7 @@
         <!-- menu select -->
         <div class="col-sm-6">
             <div class="chart-wrapper" data-step=" 5 " data-intro=" The description that you want"
-                         style="font-weight: normal" data-position="right" >
+                 style="font-weight: normal" data-position="right">
                 <div class="chart-title">
                     Donation State
                 </div>
@@ -105,7 +105,7 @@
         <!-- Metric 1 -->
         <div class="col-sm-2">
             <div class="chart-wrapper" data-step=" 6 " data-intro=" The description that you want"
-                         style="font-weight: normal" data-position="right" >
+                 style="font-weight: normal" data-position="right">
                 <div class="chart-title">
                     Total Number of Donations
                 </div>
@@ -128,7 +128,7 @@
         <!-- Metric 2 -->
         <div class="col-sm-2">
             <div class="chart-wrapper" data-step=" 7 " data-intro=" The description that you want"
-                         style="font-weight: normal" data-position="right" >
+                 style="font-weight: normal" data-position="right">
                 <div class="chart-title">
                     Total Donations in USD
                 </div>
@@ -146,19 +146,19 @@
 <hr>
 <p class="small text-muted"> Data viz &#9829;</p>
 
-</div>
 
 
-<script src="./static/lib/js/jquery.min.js"></script>
-<script src="./static/lib/js/bootstrap.min.js"></script>
-<script src="./static/lib/js/crossfilter.js"></script>
-<script src="./static/lib/js/d3.js"></script>
-<script src="./static/lib/js/dc.js"></script>
-<script src="./static/lib/js/queue.js"></script>
+
+<script src="{{ url_for ('static',filename='lib/js/jquery.min.js') }}"></script>
+<script src="{{ url_for ('static',filename='lib/js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for ('static',filename='lib/js/crossfilter.js') }}"></script>
+<script src="{{ url_for ('static',filename='lib/js/d3.js') }}"></script>
+<script src="{{ url_for ('static',filename='lib/js/dc.js') }}"></script>
+<script src="{{ url_for ('static',filename='lib/js/queue.js') }}"></script>
 
 
-<script src="./static/lib/js/keen.min.js"></script>
-<script src='./static/js/graph.js' type='text/javascript'></script>
-<script src="./static/lib/js/intro.js" type="text/javascript"></script
+<script src="{{ url_for ('static',filename='lib/js/keen.min.js') }}"></script>
+<script src="{{ url_for ('static',filename='js/graph.js') }}" type='text/javascript'></script>
+<script src="{{ url_for ('static',filename='lib/js/intro.js') }}" type="text/javascript"></script>
 </body>
 </html>
