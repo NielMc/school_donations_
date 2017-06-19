@@ -24,8 +24,8 @@ def index():
 
 @app.route("/donorsUS/projects")
 def donor_projects():
-    connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
-    # connection = MongoClient(MONGO_URI)
+    # connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
+    connection = MongoClient(MONGO_URI)
     # This connection is required when hosted using a remote mongo db.
     collection = connection[DBS_NAME][COLLECTION_NAME]
     projects = collection.find(projection=FIELDS, limit=55000)
