@@ -26,13 +26,11 @@ def index():
 def donor_projects():
     connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     # connection = MongoClient(MONGO_URI)
-#This connection is required when hosted using a remote mongo db.
+    # This connection is required when hosted using a remote mongo db.
     collection = connection[DBS_NAME][COLLECTION_NAME]
     projects = collection.find(projection=FIELDS, limit=55000)
-    json_projects = []
-    for project in projects:
-        json_projects.append(project)
-    json_projects = json.dumps(json_projects, default=json_util.default)
+    json_projects = list(projects)
+    json_projects = json.dumps(json_projects)
     connection.close()
     return json_projects
 
